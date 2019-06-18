@@ -1,0 +1,17 @@
+<table class="table">
+  <thead>
+    <th>ID</th>
+    <th>titulo</th>
+    <th>ações</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.id }}</td>
+      <td>{{ task.title }}</td>
+      <td>
+        <button class="btn btn-info">detalhes</button>
+        <button class="btn btn-danger">excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
