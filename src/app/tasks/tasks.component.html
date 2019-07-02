@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <th>ID</th>
+    <th>titulo</th>
+    <th>ações</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.id }}</td>
+      <td>{{ task.title }}</td>
+      <td>
+        <button class="btn btn-info" data-toggle="modal" data-target="#taskDetailModal" (click)="onSelect(task)">
+          <span class="glyphicon glyphicon-info-sign"></span>
+          Detalhes
+        </button>
+        <button class="btn btn-danger">
+          <span class="glyphicon glyphicon-trash"></span>
+          Excluir
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<task-detail [task]='selectedTask'></task-detail>
